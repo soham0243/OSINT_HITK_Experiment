@@ -113,6 +113,7 @@ public class admitScraper2{
 				String toolkitscriptmanager11=htmlSnippet.select("body>form#form1>div.aspNetHidden>input#ToolkitScriptManager1_HiddenField").attr("value")+"";
 				String eventvalidation1=htmlSnippet.select("body>form#form1>div.aspNetHidden>input#__EVENTVALIDATION").attr("value");
 				String viewstate1=htmlSnippet.select("body>form#form1>div.aspNetHidden>input#__VIEWSTATE").attr("value");
+				
 				RequestConfig localConfig=RequestConfig.copy(globalConfig).setCookieSpec(CookieSpecs.DEFAULT).build();
 				HttpClientContext context = HttpClientContext.create();
 				context.setAttribute(HttpClientContext.COOKIE_STORE,cookieStore);
@@ -132,6 +133,8 @@ public class admitScraper2{
 				String toolkitscriptmanager12=htmlSnippet.select("body>form#form1>div.aspNetHidden>input#ToolkitScriptManager1_HiddenField").attr("value")+"";
 				String eventvalidation2=htmlSnippet.select("body>form#form1>div.aspNetHidden>input#__EVENTVALIDATION").attr("value");
 				String viewstate2=htmlSnippet.select("body>form#form1>div.aspNetHidden>input#__VIEWSTATE").attr("value");
+				
+				
 				RequestBuilder requestBuilder2=RequestBuilder.post();
 				requestBuilder2=requestBuilder2.setUri(new URI("http://136.232.2.202:8083/NewOnlineForm.aspx"));
 				requestBuilder2=requestBuilder2.addParameter("txtAutoExamRollNoEnter",roll).addParameter("DrRegBack1","1").addParameter("__EVENTVALIDATION",eventvalidation2).addParameter("__EVENTTARGET","DrRegBack1").addParameter("__EVENTAGRUMENT",eventargument2).addParameter("__VIEWSTATE",viewstate2).addParameter("__LASTFOCUS",lastfocus2).addParameter("ToolkitScriptManager1_HiddenField",toolkitscriptmanager12);
@@ -153,6 +156,7 @@ public class admitScraper2{
 						sem=i.attr("value");
 					}
 				}
+				
 				RequestBuilder requestBuilder3=RequestBuilder.post();
 				requestBuilder3=requestBuilder3.setUri(new URI("http://136.232.2.202:8083/NewOnlineForm.aspx"));
 				requestBuilder3=requestBuilder3.addParameter("txtAutoExamRollNoEnter",roll).addParameter("DrRegBack1","1").addParameter("DrSemSelection",sem).addParameter("__EVENTVALIDATION",eventvalidation3).addParameter("__EVENTTARGET","DrSemSelection").addParameter("__EVENTARGUMENT",eventargument3).addParameter("__VIEWSTATE",viewstate3).addParameter("__LASTFOCUS",lastfocus3).addParameter("ToolkitScriptManager1_HiddenField",toolkitscriptmanager13);
@@ -166,6 +170,7 @@ public class admitScraper2{
 				String toolkitscriptmanager14=htmlSnippet.select("body>form#form1>div.aspNetHidden>input#ToolkitScriptManager1_HiddenField").attr("value")+"";
 				String eventvalidation4=htmlSnippet.select("body>form#form1>div.aspNetHidden>input#__EVENTVALIDATION").attr("value");
 				String viewstate4=htmlSnippet.select("body>form#form1>div.aspNetHidden>input#__VIEWSTATE").attr("value");
+				
 				RequestBuilder requestBuilder4=RequestBuilder.post();
 				requestBuilder4=requestBuilder4.setUri(new URI("http://136.232.2.202:8083/NewOnlineForm.aspx"));
 				requestBuilder4=requestBuilder4.addParameter("txtAutoExamRollNoEnter",roll).addParameter("DrRegBack1","1").addParameter("DrSemSelection",sem).addParameter("__EVENTVALIDATION",eventvalidation4).addParameter("__EVENTTARGET","").addParameter("__EVENTARGUMENT",eventargument4).addParameter("__VIEWSTATE",viewstate4).addParameter("__LASTFOCUS",lastfocus4).addParameter("ToolkitScriptManager1_HiddenField",toolkitscriptmanager14).addParameter("btnPrint","Print+Semester+Form/Online+Payment+Receipt");
